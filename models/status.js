@@ -15,4 +15,4 @@ const statusSchema = mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model('User', statusSchema);
+module.exports = mongoose.model('Status', statusSchema);

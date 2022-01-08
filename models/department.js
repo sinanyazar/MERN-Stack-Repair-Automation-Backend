@@ -15,4 +15,4 @@ const departmentSchema = mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model('User', departmentSchema);
+module.exports = mongoose.model('Department', departmentSchema);

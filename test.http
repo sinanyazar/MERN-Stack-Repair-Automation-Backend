@@ -1,0 +1,28 @@
+@url = http://localhost:5000
+
+###
+
+GET {{url}}/department
+
+###
+
+GET {{url}}/department/61d9a0ccc2a3f6dfe0f9751e
+
+###
+
+POST {{url}}/department/save
+Content-Type: application/json
+
+{
+    // "id" : "61d9a25ed3cea66d9af8fe2b",
+    "name": "Tablet"
+}
+
+###
+
+POST {{url}}/department/delete
+Content-Type: application/json
+
+{
+    "id": "61d9a3f19b154765a53b1467"
+}
