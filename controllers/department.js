@@ -1,5 +1,6 @@
 const deparment = require('../core/mongodb/department');
 const result = require('../core/results/result');
+
 exports.list = (req, res, next) => {
     deparment.list()
         .then(response => {

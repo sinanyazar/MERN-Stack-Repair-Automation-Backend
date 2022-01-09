@@ -2,12 +2,10 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const env = require('dotenv').config();
+const config = require('./config');
 const departmentRoutes = require('./routes/department');
 
-// ! Environment
-const port = process.env.PORT || 3000;
-const cnn = process.env.CONNECTION_STRING;
+config();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -19,10 +17,10 @@ app.get('/', (req, res) => {
 // * Routes
 app.use('/department', departmentRoutes);
 
-mongoose.connect(cnn)
+mongoose.connect(process.env.CONNECTION_STRING)
     .then(() => {
         console.log('connected');
-        app.listen(port, () => { console.log(`Listening on ${port}`); });
+        app.listen(process.env.PORT, () => { console.log(`Listening on ${process.env.PORT}`); });
     }).
     catch(err => {
         console.log(err);

@@ -1,4 +1,4 @@
-const db = require('../utility/mongodb/user');
+// const db = require('../utility/mongodb/user');
 
 exports.list = (req, res, next) => {
 
