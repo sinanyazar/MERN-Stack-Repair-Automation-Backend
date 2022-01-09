@@ -12,15 +12,9 @@ const productSchema = mongoose.Schema({
     description: String,
     price: Number,
     department: mongoose.Schema.Types.ObjectId,
-    status: mongoose.Schema.Types.ObjectId,
-    createDate: {
-        type: Date,
-        default: Date.now
-    },
-    modifyDate: {
-        type: Date,
-        default: Date.now
-    }
-});
+    status: mongoose.Schema.Types.ObjectId
+},
+{ timestamps: true, versionKey: false }
+);
 
 module.exports = mongoose.model('Product', productSchema);

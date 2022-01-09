@@ -2,17 +2,11 @@ const mongoose = require('mongoose');
 
 const statusSchema = mongoose.Schema({
     name: {
-        type: String,
+        type:String,
         required: true
-    },
-    createDate: {
-        type: Date,
-        default: Date.now
-    },
-    modifyDate: {
-        type: Date,
-        default: Date.now
     }
-});
+    },
+    { timestamps: true, versionKey: false }
+);
 
 module.exports = mongoose.model('Status', statusSchema);
