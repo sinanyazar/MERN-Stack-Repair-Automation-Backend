@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const loaders = require('./loaders');
 const config = require('./config');
 const departmentRoutes = require('./routes/department');
+const statusRoutes = require('./routes/status');
 
 config();
 loaders();
@@ -17,6 +18,7 @@ app.get('/', (req, res) => {
 
 // * Routes
 app.use('/department', departmentRoutes);
+app.use('/status', statusRoutes);
 
 app.listen(process.env.PORT, () => {
     console.log(`Listening on ${process.env.PORT}`); 

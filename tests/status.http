@@ -1,0 +1,27 @@
+@url = http://localhost:5000
+
+###
+
+GET {{url}}/status
+
+###
+
+GET {{url}}/status/61d9a24dd3cea66d9af8fe29
+
+###
+
+POST {{url}}/status/save
+Content-Type: application/json
+
+{
+    
+}
+
+###
+
+POST {{url}}/status/delete
+Content-Type: application/json
+
+{
+    "id": "61d9a25ed3cea66d9af8fe2b"
+}
