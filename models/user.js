@@ -17,9 +17,9 @@ const userSchema = mongoose.Schema({
     email: String,
     department: mongoose.Schema.Types.ObjectId,
     birthDate: Date,
-    state: Boolean,
-    createDate: Date,
-    modifyDate: Date
-});
+    state: Boolean
+},
+{ timestamps: true, versionKey: false }
+);
 
 module.exports = mongoose.model('User', userSchema);

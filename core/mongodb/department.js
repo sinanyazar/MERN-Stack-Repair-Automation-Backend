@@ -14,17 +14,13 @@ exports.save = (req) => {
 
     if (id) {
         return Department.updateOne({ _id: id }, {
-            $set: {
-                name: name,
-                modifyDate: Date.now()
-            }
+            $set: {name: name }
         })
     }
     else {
         const deparment = new Department(
             {
-                name: name,
-                createDate: Date.now()
+                name: name
             }
         );
         return deparment.save()

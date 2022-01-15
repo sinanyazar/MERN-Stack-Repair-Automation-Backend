@@ -15,7 +15,7 @@ Content-Type: application/json
 
 {
     // "id" : "61d9a25ed3cea66d9af8fe2b",
-    "name": "Tablet"
+    "name": "Telefon"
 }
 
 ###
@@ -24,5 +24,5 @@ POST {{url}}/department/delete
 Content-Type: application/json
 
 {
-    "id": "61d9a3f19b154765a53b1467"
+    "id": "61d9a25ed3cea66d9af8fe2b"
 }

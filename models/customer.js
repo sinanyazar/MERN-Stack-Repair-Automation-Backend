@@ -11,15 +11,9 @@ const customerSchema = mongoose.Schema({
     },
     phone: String,
     email: String,
-    product: mongoose.Schema.Types.ObjectId,
-    createDate: {
-        type: Date,
-        default: Date.now
-    },
-    modifyDate: {
-        type: Date,
-        default: Date.now
-    }
-});
+    product: mongoose.Schema.Types.ObjectId
+},
+{ timestamps: true, versionKey: false }
+);
 
 module.exports = mongoose.model('Customer', customerSchema);
