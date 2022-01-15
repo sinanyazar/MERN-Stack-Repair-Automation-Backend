@@ -1,0 +1,33 @@
+@url = http://localhost:5000
+
+###
+
+GET {{url}}/product
+
+###
+
+GET {{url}}/product/61e2bb974244d15317d197b7
+
+###
+
+POST {{url}}/product/save
+Content-Type: application/json
+
+{
+    "id" : "61e2bb974244d15317d197b7",
+    "name": "Iphone",
+    "model": "X",
+    "description": "Anakart arızası",
+    "price": 1500,
+    "department": "61e2bb6b4244d15317d197b5",
+    "status": "61e2b9e14244d15317d197a5"
+}
+
+###
+
+POST {{url}}/product/delete
+Content-Type: application/json
+
+{
+    "id": "61d9a25ed3cea66d9af8fe2b"
+}

@@ -6,7 +6,7 @@ GET {{url}}/status
 
 ###
 
-GET {{url}}/status/61d9a24dd3cea66d9af8fe29
+GET {{url}}/status/61e2b9e14244d15317d197a5
 
 ###
 
@@ -14,7 +14,8 @@ POST {{url}}/status/save
 Content-Type: application/json
 
 {
-    
+    // "id": "61e2ba164244d15317d197a9",
+    "name": "Teslime edildi"
 }
 
 ###
@@ -23,5 +24,5 @@ POST {{url}}/status/delete
 Content-Type: application/json
 
 {
-    "id": "61d9a25ed3cea66d9af8fe2b"
+    "id": "61e2ba3a4244d15317d197ad"
 }
